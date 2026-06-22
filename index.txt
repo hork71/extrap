@@ -1,0 +1,48 @@
+PUT server_inventory
+{
+  "mappings": {
+    "properties": {
+      "uuid": {
+        "type": "keyword"
+      },
+      "hostname": {
+        "type": "keyword"
+      },
+      "group": {
+        "type": "keyword"
+      },
+      "owner": {
+        "type": "keyword"
+      },
+      "email": {
+        "type": "keyword"
+      },
+      "managed": {
+        "type": "boolean"
+      },
+      "lifecycle_status": {
+        "type": "keyword"
+      },
+      "packages": {
+        "type": "nested",
+        "properties": {
+          "name": {
+            "type": "keyword"
+          },
+          "version": {
+            "type": "keyword"
+          },
+          "release": {
+            "type": "keyword"
+          },
+          "arch": {
+            "type": "keyword"
+          },
+          "installtime": {
+            "type": "date"
+          }
+        }
+      }
+    }
+  }
+}
